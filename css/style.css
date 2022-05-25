@@ -1,0 +1,54 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, ::before, ::after {
+    box-sizing: inherit;
+  }
+
+body{
+    display: grid;
+    grid-template-rows: 15% auto 5%;
+    margin: 30px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+header{
+    background-color: #C4C4C4;
+    text-align: center;
+    padding: 20px;
+}
+
+footer{
+    grid-row: 3;
+    background-color: #C4C4C4;
+    text-align: center;
+    padding: 20px;
+}
+
+
+img{
+    margin: 20px;
+}
+
+.high{
+    height: 530px;
+    width: 300px;
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main__photo{
+    height: 25%;
+    width: 80%;
+    flex: 1 1 1;
+    margin: 20px auto;
+}
+
+@media screen { 
+    
+}

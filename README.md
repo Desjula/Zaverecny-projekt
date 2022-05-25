@@ -1,1 +1,0 @@
-# Zaverecny-projekt

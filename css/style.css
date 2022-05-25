@@ -1,4 +1,4 @@
-html {
+* {
     box-sizing: border-box;
   }
   
@@ -8,25 +8,52 @@ html {
 
 body{
     display: grid;
-    grid-template-rows: 15% auto 5%;
-    margin: 30px;
+    grid-template-rows: 200px 400px auto 50px;
     font-size: 20px;
+    margin: 0;
     line-height: 1.5;
 }
 
 header{
+    width: 100%;
+    height: 200px;
     background-color: #C4C4C4;
+    grid-row: 1;
     text-align: center;
+}
+
+h1{
+    margin: 0;
+    position: absolute;
+    top: 70px;
+}
+
+nav{
+    background-color: rgb(77, 77, 77);
+    text-align: center;
+    grid-row: 2;
     padding: 20px;
+    position: relative;
 }
 
 footer{
-    grid-row: 3;
+    grid-row: 4;
     background-color: #C4C4C4;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }
 
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
 
 img{
     margin: 20px;
@@ -49,6 +76,38 @@ img{
     margin: 20px auto;
 }
 
-@media screen { 
-    
+
+.menu__checkbox{
+	position: absolute;
+	left: -9999px;
+}
+
+.menu__toggler{
+    position: absolute;
+    right: 20px;
+}
+
+.menu__list{
+	display: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color: rgb(77, 77, 77);
+}
+
+.menu__link{
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+	color: black;
+}
+
+.menu__checkbox:checked ~ .menu__list{
+	display: block;
+}
+
+@media screen and (min-width: 900px){
+    .menu__toggler{
+        display: none;
+    }
 }

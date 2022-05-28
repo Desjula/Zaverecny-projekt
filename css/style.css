@@ -8,8 +8,8 @@
 
 body{
     display: grid;
-    grid-template-rows: 200px 400px auto 50px;
-    grid-template-columns: 300px 1fr;
+    grid-template-rows: 330px 400px auto 50px;
+    grid-template-columns: 300px calc(100% - 300px);
     font-size: 20px;
     margin: 0;
     line-height: 1.5;
@@ -17,11 +17,11 @@ body{
 
 header{
     width: 100%;
-    height: 200px;
-    background-color: #C4C4C4;
     grid-row: 1;
     grid-column: span 2;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 h1{
@@ -45,7 +45,7 @@ nav{
 
 footer{
     grid-row: 4;
-    background-color: #C4C4C4;
+    background-color: rgba(201, 255, 173, 1);
     text-align: center;
     padding: 10px;
     position: absolute;
@@ -100,7 +100,7 @@ img{
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	background-color: rgb(77, 77, 77);
+	background-color: rgba(45, 136, 45, 1);
 }
 
 .menu__link{
@@ -115,13 +115,43 @@ img{
 	display: block;
 }
 
+.header__title-img--PC{
+    display: none;
+}
+
+.header__logo--PC{
+    display: none;
+}
+
+.header__logo--M{
+    flex: 0 1 1;
+    width: 150px;
+    height: 150px;
+    margin: 10px auto 0;
+
+}
+
+.header__title-img--M{
+    flex: 0 1 1;
+    display: block;
+    width: 90%;
+    height: 170px;
+    margin: 0 auto;
+}
+
 @media screen and (min-width: 900px){
+
+    .body{
+        grid-template-rows: 205px 400px auto 50px;
+    }
+
     .menu__toggler{
         display: none;
     }
 
     .menu__list{
             display: block;
+            margin: 0 auto;
         }
         
     .header{
@@ -144,5 +174,32 @@ img{
         grid-column: span 2;
         grid-row: 4;
     }
-    
+
+    .header__logo--PC{
+        display: block;
+        width: 200px;
+        height: 200px;
+        margin: 0;
+        position: absolute;
+        top: 5px;
+        left: 70px;
+    }
+
+    .header__title-img--PC{
+        display: block;
+        width: 560px;
+        height: 200px;
+        margin: 0;
+        position: absolute;
+        left: 300px;
+    }
+
+    .header__title-img--M{
+        display: none;
+    }
+
+    .header__logo--M{
+        display: none;
+    }
 }
+

@@ -9,6 +9,7 @@
 body{
     display: grid;
     grid-template-rows: 200px 400px auto 50px;
+    grid-template-columns: 300px 1fr;
     font-size: 20px;
     margin: 0;
     line-height: 1.5;
@@ -19,6 +20,7 @@ header{
     height: 200px;
     background-color: #C4C4C4;
     grid-row: 1;
+    grid-column: span 2;
     text-align: center;
 }
 
@@ -29,11 +31,16 @@ h1{
 }
 
 nav{
-    background-color: rgb(77, 77, 77);
+    /*background-color: rgb(77, 77, 77);*/
     text-align: center;
     grid-row: 2;
     padding: 20px;
     position: relative;
+    grid-column: span 2;
+}
+
+.main{
+    grid-row: 3;
 }
 
 footer{
@@ -44,6 +51,7 @@ footer{
     position: absolute;
     bottom: 0px;
     width: 100%;
+    grid-column: span 2;
 }
 
 ul{
@@ -97,6 +105,7 @@ img{
 
 .menu__link{
 	display: block;
+    width: 100%;
 	padding: 15px;
 	text-decoration: none;
 	color: black;
@@ -110,4 +119,30 @@ img{
     .menu__toggler{
         display: none;
     }
+
+    .menu__list{
+            display: block;
+        }
+        
+    .header{
+        grid-column: span 2;
+        grid-row: 1;
+        width: 100%;
+    }
+
+    .nav{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .main{
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+    .footer{
+        grid-column: span 2;
+        grid-row: 4;
+    }
+    
 }

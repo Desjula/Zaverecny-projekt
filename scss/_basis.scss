@@ -1,0 +1,32 @@
+*, :after, :before { box-sizing: border-box; }
+
+$primary-color: rgba(45, 136, 45, 1);
+
+h1{
+    color: $primary-color;
+}
+
+  h1{
+    margin: 0;
+    /*position: absolute;
+    top: 70px;*/
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    margin: 20px;
+}
+
+.high{
+    height: 530px;
+    width: 300px;
+}
+

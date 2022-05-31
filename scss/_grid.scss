@@ -1,0 +1,12 @@
+.whole-layout{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 330px auto auto 50px;
+
+    @media only screen and (min-width: 750px) {
+        grid-template-columns: 350px 1fr;
+        grid-template-columns: 205px auto 1fr 50px;;
+    }
+}
+

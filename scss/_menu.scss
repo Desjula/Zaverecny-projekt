@@ -1,0 +1,59 @@
+@use "basis";
+@use "grid";
+
+nav{
+    /*background-color: rgb(77, 77, 77);*/
+    text-align: center;
+    grid-row: 2;
+    padding: 0px;
+    position: relative;
+    grid-column: span 2;
+}
+
+.menu__checkbox{
+	position: absolute;
+	left: -9999px;
+}
+
+.menu__toggler{
+    position: absolute;
+    right: 20px;
+}
+
+.menu__list{
+	display: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color: rgba(45, 136, 45, 1);
+}
+
+.menu__link{
+	display: block;
+    width: 100%;
+	padding: 15px;
+	text-decoration: none;
+	color: black;
+}
+
+.menu__checkbox:checked ~ .menu__list{
+	display: block;
+}
+
+@media screen and (min-width: 870px){
+
+    .menu__toggler{
+        display: none;
+    }
+
+    .menu__list{
+            display: block;
+            margin: 0 auto;
+        }
+        
+    .nav{
+        grid-column: 1;
+        grid-row: 2;
+    }}
+
+    

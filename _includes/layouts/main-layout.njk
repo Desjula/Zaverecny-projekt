@@ -10,6 +10,8 @@
 </head>
 <body>
 
+    <div class="whole-layout">
+
 	{% include "partials/header.njk" %}
 
 	{% include "partials/menu.njk" %}
@@ -17,6 +19,8 @@
 	{{ content | safe }}
 
 	{% include "partials/footer.njk" %}
+
+    </div>
 
 </body>
 </html>

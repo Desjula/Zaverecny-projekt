@@ -2,7 +2,7 @@
     display: grid;
 
     grid-template-columns: 1fr;
-    grid-template-rows: 330px auto auto 50px;
+    grid-template-rows: 330px 30px auto 50px;
 
     grid-template-areas:
     "header"
@@ -13,7 +13,7 @@
 
 @media only screen and (min-width: 750px) {
     .whole-layout{
-        grid-template-columns: 20% 80%;
+        grid-template-columns: 200px 1fr;
         grid-template-rows: 205px auto 50px;
     
         grid-template-areas:

@@ -1,15 +1,13 @@
 @use "basis";
 @use "grid";
 
-.header{
-    background-color: rgba(201, 255, 173, 1);
+header{
+  background-color: rgba(201, 255, 173, 1);
 }
 
 
 header{
     width: 100%;
-    /*grid-row: 1;
-    grid-column: span 2;*/
     text-align: center;
     display: flex;
     flex-wrap: wrap;

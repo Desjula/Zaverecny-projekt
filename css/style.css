@@ -38,13 +38,13 @@ img {
 .whole-layout {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 330px auto auto 50px;
+  grid-template-rows: 330px 30px auto 50px;
   grid-template-areas: "header" "menu" "main" "footer";
 }
 
 @media only screen and (min-width: 750px) {
   .whole-layout {
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 200px 1fr;
     grid-template-rows: 205px auto 50px;
     grid-template-areas: "header header" "menu   main" "footer footer";
   }
@@ -71,14 +71,12 @@ body {
   line-height: 1.5;
 }
 
-.header {
+header {
   background-color: rgb(201, 255, 173);
 }
 
 header {
   width: 100%;
-  /*grid-row: 1;
-  grid-column: span 2;*/
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -156,10 +154,14 @@ header {
 }
 nav {
   text-align: center;
-  grid-row: 2;
   padding: 0px;
   position: relative;
   display: flex;
+  background-color: rgb(45, 136, 45);
+}
+
+.menu {
+  background-color: rgb(45, 136, 45);
 }
 
 .menu__checkbox {
@@ -170,6 +172,7 @@ nav {
 .menu__toggler {
   position: absolute;
   right: 20px;
+  /*background-color: $primary-color;*/
 }
 
 .menu__list {
@@ -177,11 +180,10 @@ nav {
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: rgb(45, 136, 45);
 }
 
 .menu__item {
-  width: 190px;
+  width: 200px;
 }
 
 .menu__link {
@@ -190,6 +192,9 @@ nav {
   padding: 15px;
   text-decoration: none;
   color: black;
+}
+.menu__link:active {
+  color: white;
 }
 
 .menu__checkbox:checked ~ .menu__list {

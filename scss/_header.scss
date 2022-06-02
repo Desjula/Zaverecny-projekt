@@ -1,88 +1,68 @@
 @use "basis";
 @use "grid";
 
-header{
+.header{
     background-color: rgba(201, 255, 173, 1);
-    width: 100%;
     text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-}
 
-.header__title-img--PC{
-    display: none;
-}
+    &__logo{
+        &--PC{
+            display: none;
+        }
 
-.header__logo--PC{
-    display: none;
-}
-
-.header__logo--M{
-    flex: 0 1 1;
-    width: 150px;
-    height: 150px;
-    margin: 10px auto 0;
-
-}
-
-.header__title-img--M{
-    flex: 0 1 1;
-    display: block;
-    width: 90%;
-    max-width: 600px;
-    height: 170px;
-    margin: 0 auto;
-}
-
-@media screen and (min-width: 750px){
-    .header__logo--PC{
-        display: block;
-        width: 200px;
-        height: 200px;
-        margin: 0;
-        position: absolute;
-        top: 5px;
-        left: 0px;
+        &--M{
+            width: 150px;
+            height: 150px;
+            margin-top: 10px;
+        }
     }
 
-    .header__title-img--PC{
-        display: block;
-        width: 420px;
-        height: 200px;
-        margin: 0;
-        position: absolute;
-        left: 300px;
-    }
+    &__title{
+        &--PC{
+            display: none;
+        }
 
-    .header__title-img--M{
-        display: none;
-    }
+        &--M{
+        width: 90%;
+        max-width: 600px;
+        }
 
-    .header__logo--M{
-        display: none;
     }
 }
 
-@media screen and (min-width: 870px){
-
+@media only screen and (min-width: 750px){
     .header{
-        grid-column: span 2;
-        grid-row: 1;
-        width: 100%;
-    }
+        &__logo{
+            &--M{
+                display: none;
+            }
 
-.header__title-img--PC{
-        width: 560px;
-    }
+            &--PC{
+                display: block;
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: 5px;
+                left: 0px;
+            }
+        }
 
+        &__title{
+            &--M{
+                display: none;
+            }
+
+            &--PC{
+                display: block;
+                height: 200px;
+                margin-left: 250px;
+            }
+        }
+    }
 }
 
-
-@media only screen and (min-width: 1500px) {
-    
-    .header__title-img--PC{
-        width: 780px;
-        height: 205px;
-        margin-left: 30px;
+@media only screen and (min-width: 1000px){
+    .header__title--PC{
+        margin: 0 auto;
     }
 }

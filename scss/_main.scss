@@ -1,16 +1,12 @@
 @use "basis";
 @use "grid";
 @use "previously";
+@use "pozvanka";
+@use "novinky";
+@use "galerie";
+@use "trasa";
+@use "content";
 
 .main{
-    display: flex;
-    flex-wrap: wrap;
     padding: 20px;
-}
-
-.main__photo{
-    height: 25%;
-    width: 80%;
-    flex: 1 1 1;
-    margin: 20px auto;
 }

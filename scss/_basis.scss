@@ -2,33 +2,16 @@
 
 $primary: #2d882d;
 $secondary: #c9ffad;
+$third: #324329;
 
-li{
-    list-style: none;
+.page-name{
+    margin: 15px 0 25px 0;
+    color: $third;
+    text-align: center;
 }
 
 .right{
     text-align: right;
-}
-
-h4{
-    margin: 0;
-    width: 100%;
-}
-
-p{
-    text-align: justify;
-    margin: 0;
-    height: 1em;
-}
-
-ol{
-    padding: 20px;
-}
-
-li{
-    list-style: decimal;
-    padding-left: 5px;
 }
 
 .thicc{
@@ -36,16 +19,21 @@ li{
     display: inline;
 }
 
-.trasa{
-    &__text{
-        margin: 0 0 5px 0;
-    }
-
-    &__header{
-        margin: 15px 0 5px 0;
-    }
+ol{
+    padding: 20px;
 }
 
-h3{
-    width: 100%;
+.decimal{
+    list-style: decimal;
+    padding-left: 5px;
+}
+
+.nondecimal{
+    list-style: disc;
+    padding-left: 5px;
+}
+
+p{
+    text-align: justify;
+    margin: 0;
 }

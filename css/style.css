@@ -2,32 +2,14 @@
   box-sizing: border-box;
 }
 
-li {
-  list-style: none;
+.page-name {
+  margin: 15px 0 25px 0;
+  color: #324329;
+  text-align: center;
 }
 
 .right {
   text-align: right;
-}
-
-h4 {
-  margin: 0;
-  width: 100%;
-}
-
-p {
-  text-align: justify;
-  margin: 0;
-  height: 1em;
-}
-
-ol {
-  padding: 20px;
-}
-
-li {
-  list-style: decimal;
-  padding-left: 5px;
 }
 
 .thicc {
@@ -35,21 +17,29 @@ li {
   display: inline;
 }
 
-.trasa__text {
-  margin: 0 0 5px 0;
-}
-.trasa__header {
-  margin: 15px 0 5px 0;
+ol {
+  padding: 20px;
 }
 
-h3 {
-  width: 100%;
+.decimal {
+  list-style: decimal;
+  padding-left: 5px;
+}
+
+.nondecimal {
+  list-style: disc;
+  padding-left: 5px;
+}
+
+p {
+  text-align: justify;
+  margin: 0;
 }
 
 .whole-layout {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 330px minmax(30px, 1fr) auto 50px;
+  grid-template-rows: auto minmax(40px, 1fr) auto 50px;
   grid-template-areas: "header" "menu" "main" "footer";
 }
 
@@ -82,128 +72,82 @@ body {
   line-height: 1.25;
 }
 
-header {
+.header {
   background-color: rgb(201, 255, 173);
-  width: 100%;
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
 }
-
-.header__title-img--PC {
-  display: none;
-}
-
 .header__logo--PC {
   display: none;
 }
-
 .header__logo--M {
-  flex: 0 1 1;
   width: 150px;
   height: 150px;
-  margin: 10px auto 0;
+  margin-top: 10px;
 }
-
-.header__title-img--M {
-  flex: 0 1 1;
-  display: block;
+.header__title--PC {
+  display: none;
+}
+.header__title--M {
   width: 90%;
   max-width: 600px;
-  height: 170px;
-  margin: 0 auto;
 }
 
-@media screen and (min-width: 750px) {
+@media only screen and (min-width: 750px) {
+  .header__logo--M {
+    display: none;
+  }
   .header__logo--PC {
     display: block;
     width: 200px;
     height: 200px;
-    margin: 0;
     position: absolute;
     top: 5px;
     left: 0px;
   }
-
-  .header__title-img--PC {
+  .header__title--M {
+    display: none;
+  }
+  .header__title--PC {
     display: block;
-    width: 420px;
     height: 200px;
-    margin: 0;
-    position: absolute;
-    left: 300px;
-  }
-
-  .header__title-img--M {
-    display: none;
-  }
-
-  .header__logo--M {
-    display: none;
+    margin-left: 250px;
   }
 }
-@media screen and (min-width: 870px) {
-  .header {
-    grid-column: span 2;
-    grid-row: 1;
-    width: 100%;
-  }
-
-  .header__title-img--PC {
-    width: 560px;
+@media only screen and (min-width: 1000px) {
+  .header__title--PC {
+    margin: 0 auto;
   }
 }
-@media only screen and (min-width: 1500px) {
-  .header__title-img--PC {
-    width: 780px;
-    height: 205px;
-    margin-left: 30px;
-  }
-}
-nav {
-  text-align: center;
-  padding: 0px;
-  position: relative;
-  display: flex;
-  background-color: rgb(45, 136, 45);
-}
-
 .menu {
+  text-align: center;
   background-color: rgb(45, 136, 45);
 }
-
 .menu__checkbox {
   position: absolute;
   left: -9999px;
 }
-
 .menu__toggler {
   position: absolute;
-  right: 20px;
-  margin-bottom: 10px;
+  right: 15px;
+  margin: 10px 0;
 }
-
 .menu__list {
   display: none;
   margin: 0;
   padding: 0;
-  width: 100%;
-  list-style: none;
 }
-
-.menu__item {
-  width: 100%;
+.menu__item--last {
+  margin-bottom: 30px;
 }
-
 .menu__link {
   display: inline-block;
-  width: 100%;
-  padding: 15px;
+  padding-top: 30px;
   text-decoration: none;
   color: black;
   font-weight: bold;
 }
-.menu__link:active {
+
+a:hover, a:active {
   color: white;
 }
 
@@ -215,35 +159,45 @@ nav {
   .menu__toggler {
     display: none;
   }
-
   .menu__list {
     display: block;
-    margin: 0;
-  }
-
-  .nav {
-    grid-column: 1/2;
-    grid-row: 2;
   }
 }
 .previously__text--thicc {
   font-weight: bold;
 }
 .previously__list {
+  margin: 10px 0 20px 0;
+}
+.previously__header {
+  margin: 25px 0;
+}
+
+.prvni-rocnik {
+  margin-bottom: 30px;
+}
+
+.pozvanka__text {
+  text-align: justify;
+}
+.pozvanka__header {
   margin: 10px;
+  height: 1em;
+}
+
+.trasa__text {
+  margin: 0 0 5px 0;
+}
+.trasa__header {
+  margin: 15px 0 5px 0;
+}
+
+.content__header {
+  margin: 20px 0;
 }
 
 .main {
-  display: flex;
-  flex-wrap: wrap;
   padding: 20px;
-}
-
-.main__photo {
-  height: 25%;
-  width: 80%;
-  flex: 1 1 1;
-  margin: 20px auto;
 }
 
 .footer {

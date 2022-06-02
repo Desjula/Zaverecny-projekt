@@ -1,37 +1,51 @@
 *, :after, :before { box-sizing: border-box; }
 
-$primary-color: rgba(45, 136, 45, 1);
-$secundary-color: rgba(201, 255, 173, 1);
-
-h1{
-    color: $primary-color;
-}
-
-  h1{
-    margin: 0;
-    /*position: absolute;
-    top: 70px;*/
-}
-
-ul{
-    margin: 0;
-    padding: 0;
-}
+$primary: #2d882d;
+$secondary: #c9ffad;
 
 li{
     list-style: none;
 }
 
-img{
-    margin: 20px;
+.right{
+    text-align: right;
 }
 
-.high{
-    height: 530px;
-    width: 300px;
+h4{
+    margin: 0;
+    width: 100%;
 }
 
-.photo-wide{
-    height: 300px;
-    width: 530px;
+p{
+    text-align: justify;
+    margin: 0;
+    height: 1em;
+}
+
+ol{
+    padding: 20px;
+}
+
+li{
+    list-style: decimal;
+    padding-left: 5px;
+}
+
+.thicc{
+    font-weight: bold;
+    display: inline;
+}
+
+.trasa{
+    &__text{
+        margin: 0 0 5px 0;
+    }
+
+    &__header{
+        margin: 15px 0 5px 0;
+    }
+}
+
+h3{
+    width: 100%;
 }

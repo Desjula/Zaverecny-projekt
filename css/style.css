@@ -2,43 +2,54 @@
   box-sizing: border-box;
 }
 
-h1 {
-  color: rgb(45, 136, 45);
-}
-
-h1 {
-  margin: 0;
-  /*position: absolute;
-  top: 70px;*/
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
 li {
   list-style: none;
 }
 
-img {
-  margin: 20px;
+.right {
+  text-align: right;
 }
 
-.high {
-  height: 530px;
-  width: 300px;
+h4 {
+  margin: 0;
+  width: 100%;
 }
 
-.photo-wide {
-  height: 300px;
-  width: 530px;
+p {
+  text-align: justify;
+  margin: 0;
+  height: 1em;
+}
+
+ol {
+  padding: 20px;
+}
+
+li {
+  list-style: decimal;
+  padding-left: 5px;
+}
+
+.thicc {
+  font-weight: bold;
+  display: inline;
+}
+
+.trasa__text {
+  margin: 0 0 5px 0;
+}
+.trasa__header {
+  margin: 15px 0 5px 0;
+}
+
+h3 {
+  width: 100%;
 }
 
 .whole-layout {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 330px 30px auto 50px;
+  grid-template-rows: 330px minmax(30px, 1fr) auto 50px;
   grid-template-areas: "header" "menu" "main" "footer";
 }
 
@@ -68,14 +79,11 @@ img {
 body {
   font-size: 20px;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.25;
 }
 
 header {
   background-color: rgb(201, 255, 173);
-}
-
-header {
   width: 100%;
   text-align: center;
   display: flex;
@@ -172,18 +180,19 @@ nav {
 .menu__toggler {
   position: absolute;
   right: 20px;
-  /*background-color: $primary-color;*/
+  margin-bottom: 10px;
 }
 
 .menu__list {
   display: none;
   margin: 0;
   padding: 0;
+  width: 100%;
   list-style: none;
 }
 
 .menu__item {
-  width: 200px;
+  width: 100%;
 }
 
 .menu__link {
@@ -192,6 +201,7 @@ nav {
   padding: 15px;
   text-decoration: none;
   color: black;
+  font-weight: bold;
 }
 .menu__link:active {
   color: white;
@@ -216,10 +226,17 @@ nav {
     grid-row: 2;
   }
 }
+.previously__text--thicc {
+  font-weight: bold;
+}
+.previously__list {
+  margin: 10px;
+}
+
 .main {
   display: flex;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 20px;
 }
 
 .main__photo {
@@ -229,14 +246,8 @@ nav {
   margin: 20px auto;
 }
 
-@media screen and (min-width: 870px) {
-  .main {
-    grid-column: 2;
-    grid-row: 2;
-  }
-}
-footer {
-  background-color: rgb(201, 255, 173);
+.footer {
+  background-color: #c9ffad;
   text-align: center;
   padding: 10px;
   bottom: 0px;

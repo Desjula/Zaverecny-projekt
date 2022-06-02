@@ -21,19 +21,20 @@ nav{
 .menu__toggler{
     position: absolute;
     right: 20px;
-    /*background-color: $primary-color;*/
+    margin-bottom: 10px;
 }
 
 .menu__list{
 	display: none;
 	margin: 0;
 	padding: 0;
+    width: 100%;
 	list-style: none;
 
 }
 
 .menu__item{
-    width: 200px;
+    width: 100%;
 }
 
 .menu__link{
@@ -42,6 +43,7 @@ nav{
 	padding: 15px;
 	text-decoration: none;
 	color: black;
+    font-weight: bold;
 
     &:active{
         color: white;

@@ -30,23 +30,49 @@ img {
   width: 300px;
 }
 
+.photo-wide {
+  height: 300px;
+  width: 530px;
+}
+
 .whole-layout {
-  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 330px auto auto 50px;
+  grid-template-areas: "header" "menu" "main" "footer";
 }
+
 @media only screen and (min-width: 750px) {
   .whole-layout {
-    grid-template-columns: 350px 1fr;
-    grid-template-columns: 205px auto 1fr 50px;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 205px auto 50px;
+    grid-template-areas: "header header" "menu   main" "footer footer";
   }
+}
+.header {
+  grid-area: header;
+}
+
+.menu {
+  grid-area: menu;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
 }
 
 body {
   font-size: 20px;
   margin: 0;
   line-height: 1.5;
+}
+
+.header {
+  background-color: rgb(201, 255, 173);
 }
 
 header {
@@ -90,13 +116,13 @@ header {
     margin: 0;
     position: absolute;
     top: 5px;
-    left: 70px;
+    left: 0px;
   }
 
   .header__title-img--PC {
     display: block;
-    width: 435px;
-    height: 170px;
+    width: 420px;
+    height: 200px;
     margin: 0;
     position: absolute;
     left: 300px;
@@ -129,12 +155,11 @@ header {
   }
 }
 nav {
-  /*background-color: rgb(77, 77, 77);*/
   text-align: center;
   grid-row: 2;
   padding: 0px;
   position: relative;
-  grid-column: span 2;
+  display: flex;
 }
 
 .menu__checkbox {
@@ -155,8 +180,12 @@ nav {
   background-color: rgb(45, 136, 45);
 }
 
+.menu__item {
+  width: 190px;
+}
+
 .menu__link {
-  display: block;
+  display: inline-block;
   width: 100%;
   padding: 15px;
   text-decoration: none;
@@ -167,28 +196,25 @@ nav {
   display: block;
 }
 
-@media screen and (min-width: 870px) {
+@media screen and (min-width: 750px) {
   .menu__toggler {
     display: none;
   }
 
   .menu__list {
     display: block;
-    margin: 0 auto;
+    margin: 0;
   }
 
   .nav {
-    grid-column: 1;
+    grid-column: 1/2;
     grid-row: 2;
   }
 }
 .main {
-  grid-row: 3;
-}
-
-.main {
   display: flex;
   flex-wrap: wrap;
+  padding: 10px;
 }
 
 .main__photo {
@@ -205,18 +231,8 @@ nav {
   }
 }
 footer {
-  grid-column: 1;
-  grid-row: 4;
   background-color: rgb(201, 255, 173);
   text-align: center;
   padding: 10px;
-  position: absolute;
   bottom: 0px;
-  width: 100%;
-}
-@media only screen and (min-width: 750px) {
-  footer {
-    position: absolute;
-    bottom: 0%;
-  }
 }/*# sourceMappingURL=style.css.map */

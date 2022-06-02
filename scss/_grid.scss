@@ -1,12 +1,30 @@
 .whole-layout{
-    position: relative;
     display: grid;
+
     grid-template-columns: 1fr;
     grid-template-rows: 330px auto auto 50px;
 
-    @media only screen and (min-width: 750px) {
-        grid-template-columns: 350px 1fr;
-        grid-template-columns: 205px auto 1fr 50px;;
+    grid-template-areas:
+    "header"
+    "menu"
+    "main"
+    "footer"
+}
+
+@media only screen and (min-width: 750px) {
+    .whole-layout{
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 205px auto 50px;
+    
+        grid-template-areas:
+        "header header"
+        "menu   main"
+        "footer footer"
     }
 }
 
+
+.header { grid-area: header; }
+.menu { grid-area: menu; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }

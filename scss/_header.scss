@@ -1,6 +1,11 @@
 @use "basis";
 @use "grid";
 
+.header{
+    background-color: rgba(201, 255, 173, 1);
+}
+
+
 header{
     width: 100%;
     /*grid-row: 1;
@@ -43,13 +48,13 @@ header{
         margin: 0;
         position: absolute;
         top: 5px;
-        left: 70px;
+        left: 0px;
     }
 
     .header__title-img--PC{
         display: block;
-        width: 435px;
-        height: 170px;
+        width: 420px;
+        height: 200px;
         margin: 0;
         position: absolute;
         left: 300px;

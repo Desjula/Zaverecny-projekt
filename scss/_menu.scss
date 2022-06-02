@@ -2,12 +2,11 @@
 @use "grid";
 
 nav{
-    /*background-color: rgb(77, 77, 77);*/
     text-align: center;
     grid-row: 2;
     padding: 0px;
     position: relative;
-    grid-column: span 2;
+    display: flex;
 }
 
 .menu__checkbox{
@@ -28,8 +27,12 @@ nav{
 	background-color: rgba(45, 136, 45, 1);
 }
 
+.menu__item{
+    width: 190px;
+}
+
 .menu__link{
-	display: block;
+	display: inline-block;
     width: 100%;
 	padding: 15px;
 	text-decoration: none;
@@ -40,7 +43,7 @@ nav{
 	display: block;
 }
 
-@media screen and (min-width: 870px){
+@media screen and (min-width: 750px){
 
     .menu__toggler{
         display: none;
@@ -48,11 +51,11 @@ nav{
 
     .menu__list{
             display: block;
-            margin: 0 auto;
+            margin: 0;
         }
         
     .nav{
-        grid-column: 1;
+        grid-column: 1/2;
         grid-row: 2;
     }}
 

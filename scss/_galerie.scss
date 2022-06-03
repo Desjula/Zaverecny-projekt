@@ -1,0 +1,37 @@
+.galerie{
+    &__header{
+        height: 1em;
+        margin: 25px 0;
+    }
+
+    &__grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    }
+
+    &__img{
+        background-color: beige;
+        padding: 10px;
+        margin: 20px auto 0 auto;
+        max-width: 90%;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .galerie{
+        &__grid{
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-flow: dense;
+        }
+    }
+
+    .high{
+        grid-row: span 2;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .galerie__grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

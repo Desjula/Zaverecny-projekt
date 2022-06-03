@@ -185,6 +185,36 @@ a:hover, a:active {
   height: 1em;
 }
 
+.galerie__header {
+  height: 1em;
+  margin: 25px 0;
+}
+.galerie__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.galerie__img {
+  background-color: beige;
+  padding: 10px;
+  margin: 20px auto 0 auto;
+  max-width: 90%;
+}
+
+@media only screen and (min-width: 750px) {
+  .galerie__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: dense;
+  }
+
+  .high {
+    grid-row: span 2;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .galerie__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 .trasa__text {
   margin: 0 0 5px 0;
 }
@@ -194,6 +224,11 @@ a:hover, a:active {
 
 .content__header {
   margin: 20px 0;
+}
+.content__image {
+  width: 80%;
+  margin: 5px auto 10px auto;
+  display: block;
 }
 
 .main {

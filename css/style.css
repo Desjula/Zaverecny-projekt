@@ -185,6 +185,36 @@ a:hover, a:active {
   height: 1em;
 }
 
+.novinky__item {
+  height: 50px;
+  background-color: #c9ffad;
+  text-decoration: none;
+  color: black;
+  display: block;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+}
+.novinky__list {
+  margin-top: 10px;
+}
+
+.podpis {
+  margin-bottom: 20px;
+}
+
+.zpet {
+  color: #324329;
+  text-align: right;
+}
+.zpet:hover {
+  color: #2d882d;
+}
+.zpet:active {
+  color: #2d882d;
+}
+
 .galerie__header {
   height: 1em;
   margin: 25px 0;

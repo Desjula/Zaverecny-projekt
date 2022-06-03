@@ -1,0 +1,39 @@
+@use "basis";
+@use "grid";
+
+.novinky{
+    &__item {
+    height: 50px;
+    background-color: #c9ffad;
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+    }
+
+    &__list{
+        margin-top: 10px;
+    }
+}
+
+.podpis{
+    margin-bottom: 20px;
+}
+
+
+.zpet{
+
+    color: #324329;
+    text-align: right;
+
+    &:hover{
+        color: #2d882d;
+    }
+
+    &:active{
+        color: #2d882d;
+    }
+}

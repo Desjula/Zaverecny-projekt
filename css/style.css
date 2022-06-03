@@ -36,6 +36,19 @@ p {
   margin: 0;
 }
 
+.nahoru {
+  margin-top: 15px;
+  text-decoration: none;
+  color: #324329;
+  text-align: right;
+}
+.nahoru:hover {
+  color: #2d882d;
+}
+.nahoru:active {
+  color: #2d882d;
+}
+
 .whole-layout {
   display: grid;
   grid-template-columns: 1fr;
@@ -183,6 +196,11 @@ a:hover, a:active {
 .pozvanka__header {
   margin: 10px;
   height: 1em;
+}
+.pozvanka__plakat {
+  width: 50%;
+  margin: 20px auto 10px auto;
+  display: block;
 }
 
 .novinky__item {

@@ -37,3 +37,18 @@ p{
     text-align: justify;
     margin: 0;
 }
+
+.nahoru{
+    margin-top: 15px;
+    text-decoration: none;
+    color: #324329;
+    text-align: right;
+
+    &:hover{
+        color: #2d882d;
+    }
+
+    &:active{
+        color: #2d882d;
+    }
+}
